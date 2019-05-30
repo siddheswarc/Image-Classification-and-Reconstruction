@@ -15,6 +15,10 @@ We train the following classifiers:
 ### Observations
 
 1. Bayesian Discriminant Function, achieving an accuracy of 84%
+
+| ![Bayesian Discriminant Analysis on MNIST dataset](https://github.com/siddheswarc/MNIST/raw/master/confusion_matrices/Bayesian%20Discriminant%20Analysis%20on%20MNIST%20dataset.png)  | ![Bayesian Discriminant Analysis on USPS dataset](https://github.com/siddheswarc/MNIST/raw/master/confusion_matrices/Bayesian%20Discriminant%20Analysis%20on%20USPS%20dataset.png)  | ![Bayesian Discriminant Analysis on Combined dataset](https://github.com/siddheswarc/MNIST/raw/master/confusion_matrices/Bayesian%20Discriminant%20Analysis%20on%20combined%20dataset.png)  |
+|---|---|---|
+<br><br><br>
 ![Bayesian Discriminant Analysis on MNIST dataset](https://github.com/siddheswarc/MNIST/raw/master/confusion_matrices/Bayesian%20Discriminant%20Analysis%20on%20MNIST%20dataset.png)
 ![Bayesian Discriminant Analysis on USPS dataset](https://github.com/siddheswarc/MNIST/raw/master/confusion_matrices/Bayesian%20Discriminant%20Analysis%20on%20USPS%20dataset.png)
 ![Bayesian Discriminant Analysis on Combined dataset](https://github.com/siddheswarc/MNIST/raw/master/confusion_matrices/Bayesian%20Discriminant%20Analysis%20on%20combined%20dataset.png)
