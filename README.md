@@ -18,25 +18,25 @@ We train the following classifiers:
 
 | ![Bayesian Discriminant Analysis on MNIST dataset](https://github.com/siddheswarc/MNIST/raw/master/confusion_matrices/Bayesian%20Discriminant%20Analysis%20on%20MNIST%20dataset.png)  | ![Bayesian Discriminant Analysis on USPS dataset](https://github.com/siddheswarc/MNIST/raw/master/confusion_matrices/Bayesian%20Discriminant%20Analysis%20on%20USPS%20dataset.png)  | ![Bayesian Discriminant Analysis on Combined dataset](https://github.com/siddheswarc/MNIST/raw/master/confusion_matrices/Bayesian%20Discriminant%20Analysis%20on%20combined%20dataset.png)  |
 |---|---|---|
-
+&nbsp;
 
 2. Logistic Regression, achieving an accuracy of 86%
 
 | ![Logistic Regression on MNIST dataset](https://github.com/siddheswarc/MNIST/raw/master/confusion_matrices/Logistic%20Regression%20on%20MNIST%20dataset.png)  | ![Logistic Regression on USPS dataset](https://github.com/siddheswarc/MNIST/raw/master/confusion_matrices/Logistic%20Regression%20on%20USPS%20dataset.png)  | ![Logistic Regression on Combined datasets](https://github.com/siddheswarc/MNIST/raw/master/confusion_matrices/Logistic%20Regression%20on%20combined%20dataset.png)  |
 |---|---|---|
-
+&nbsp;
 
 3. SVM (Support Vector Machine) Package, achieving an accuracy of 97%
 
 | ![SVM on MNIST dataset](https://github.com/siddheswarc/MNIST/raw/master/confusion_matrices/SVM%20on%20MNIST%20dataset.png)  | ![SVM on USPS dataset](https://github.com/siddheswarc/MNIST/raw/master/confusion_matrices/SVM%20on%20USPS%20dataset.png)  | ![SVM on Combined datasets](https://github.com/siddheswarc/MNIST/raw/master/confusion_matrices/SVM%20on%20combined%20dataset.png)  |
 |---|---|---|
-
+&nbsp;
 
 4. Random Forest Package, achieving an accuracy of 97%
 
 | ![Random Forest on MNIST dataset](https://github.com/siddheswarc/MNIST/raw/master/confusion_matrices/Random%20Forest%20on%20MNIST%20dataset.png)  | ![Random Forest on USPS dataset](https://github.com/siddheswarc/MNIST/raw/master/confusion_matrices/Random%20Forest%20on%20USPS%20dataset.png)  | ![Random Forest on Combined datasets](https://github.com/siddheswarc/MNIST/raw/master/confusion_matrices/Random%20Forest%20on%20combined%20dataset.png)  |
 |---|---|---|
-
+&nbsp;
 
 5. Multilayer perceptron Neural Network, achieving an accuracy of 98%
 
