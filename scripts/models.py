@@ -6,11 +6,12 @@
 
 import numpy as np
 import tensorflow as tf
-from confusion_matrix import ConfusionMatrix
 from keras.utils import np_utils
 from sklearn import svm, metrics
 from sklearn.ensemble import RandomForestClassifier
 from tqdm import tqdm
+
+from scripts.confusion_matrix import ConfusionMatrix
 
 confusion_matrix = ConfusionMatrix()
 

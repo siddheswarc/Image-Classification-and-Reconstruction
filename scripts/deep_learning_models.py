@@ -12,18 +12,16 @@ from tensorflow_probability import distributions
 from tqdm import tqdm
 
 
-# TODO: fill param tags for documentation
-
 class RBM:
 
     def __init__(self, images, n_components, learning_rate, batch_size, n_iter, random_state):
         """
-        :param images:
-        :param n_components:
-        :param learning_rate:
-        :param batch_size:
-        :param n_iter:
-        :param random_state:
+        :param images: input data for the RBM neural network
+        :param n_components: number of hidden units for the RBM neural network
+        :param learning_rate: learning rate for the RBM neural network
+        :param batch_size: batch size for the RBM neural network
+        :param n_iter: number of iterations/epochs for the RBM neural network
+        :param random_state: random state for the RBM neural network
         """
         self.images = images
         self.batch_size = batch_size
@@ -39,15 +37,15 @@ class RBM:
 
     def fit(self):
         """
-        :return:
+        :return: void
         """
         self.x, _ = self.images.train.next_batch(self.batch_size)
         self.rbm.fit(self.x)
 
     def gibbs_sampling(self, k):
         """
-        :param k:
-        :return:
+        :param k: number of steps of Gibbs sampling
+        :return: void
         """
         for i in range(k):
             gibbs_x = self.rbm.gibbs(self.x)
@@ -55,6 +53,10 @@ class RBM:
             self.x[gibbs_x] = 1
 
     def generate_images(self, num_hidden_nodes):
+        """
+        :param num_hidden_nodes: number of hidden nodes/units
+        :return: void
+        """
         plt.figure(figsize=(6, 6))
         for i, comp in enumerate(self.x):
             plt.subplot(10, 10, i + 1)
@@ -70,8 +72,8 @@ class VAE:
 
     def __init__(self, images, code_units):
         """
-        :param images:
-        :param code_units:
+        :param images: input data for the Variational Auto Encoder
+        :param code_units: number of code units for the VAE
         """
         tf.reset_default_graph()
         self.images = images
@@ -93,7 +95,7 @@ class VAE:
 
     def encode(self):
         """
-        :return:
+        :return: void
         """
         with tf.variable_scope('encoder', reuse=tf.AUTO_REUSE):
             mean = tf.layers.dense(
@@ -116,7 +118,7 @@ class VAE:
 
     def make_prior(self):
         """
-        :return:
+        :return: void
         """
         mean = tf.zeros(self.code_units)
         variance = tf.ones(self.code_units)
@@ -125,9 +127,9 @@ class VAE:
     @staticmethod
     def decode(code, data_shape):
         """
-        :param code:
-        :param data_shape:
-        :return:
+        :param code: number of code units
+        :param data_shape: dimensionality of the input data
+        :return: void
         """
         with tf.variable_scope('decoder', reuse=tf.AUTO_REUSE):
             logit = tf.reshape(
@@ -142,8 +144,8 @@ class VAE:
 
     def generate_images(self, epochs):
         """
-        :param epochs:
-        :return:
+        :param epochs: number of epochs
+        :return: void
         """
         with tf.train.MonitoredSession() as sess:
             for epoch in range(epochs):
@@ -187,9 +189,9 @@ class VAEConvolutionalNeuralNet:
 
     def __init__(self, images, input_shape, output_shape):
         """
-        :param images:
-        :param input_shape:
-        :param output_shape:
+        :param images: input data for the Convolutional VAE
+        :param input_shape: dimensionality of the input data
+        :param output_shape: dimensionality of the output data
         """
         self.images = images
         inputmatx, inputmaty = input_shape
@@ -210,7 +212,7 @@ class VAEConvolutionalNeuralNet:
 
     def encode(self):
         """
-        :return:
+        :return: void
         """
         self.encoder_out = tf.layers.conv2d(
             self.inputTensor,
@@ -259,7 +261,7 @@ class VAEConvolutionalNeuralNet:
 
     def decode(self):
         """
-        :return:
+        :return: void
         """
         self.decoder_out = tf.image.resize_nearest_neighbor(
             self.encoder_out, (7, 7)
@@ -309,7 +311,7 @@ class VAEConvolutionalNeuralNet:
 
     def compile_(self):
         """
-        :return:
+        :return: void
         """
         loss = tf.nn.sigmoid_cross_entropy_with_logits(
             logits=self.logits, labels=self.outputTensor
@@ -319,9 +321,9 @@ class VAEConvolutionalNeuralNet:
 
     def train(self, epochs, batch_size):
         """
-        :param epochs:
-        :param batch_size:
-        :return:
+        :param epochs: number of epochs
+        :param batch_size: batch size for training
+        :return: void
         """
         sess = tf.Session()
         sess.run(tf.global_variables_initializer())
@@ -352,10 +354,10 @@ class VAEConvolutionalNeuralNet:
     @staticmethod
     def draw_image(original_images, modeled_images, epoch):
         """
-        :param original_images:
-        :param modeled_images:
-        :param epoch:
-        :return:
+        :param original_images: original input image
+        :param modeled_images: modeled output image of Convolutional VAE
+        :param epoch: epoch number
+        :return: void
         """
         plt.clf()
         f, axarr = plt.subplots(2, 10, sharex=True, sharey=True, figsize=(20, 5))
