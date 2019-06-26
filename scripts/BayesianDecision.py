@@ -7,13 +7,13 @@
 import numpy as np
 from matplotlib import pyplot as plt
 from tqdm import tqdm
+
 from confusion_matrix import ConfusionMatrix
 
 confusion_matrix = ConfusionMatrix()
 
 
 class DiscriminantAnalysis:
-
     NUMBER_OF_OUTPUT_CLASSES = 10
     NOISE = 0.1  # Noise to avoid singular matrix error
 

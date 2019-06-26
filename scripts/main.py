@@ -6,12 +6,13 @@
 
 import os
 
+from tensorflow.examples.tutorials.mnist import input_data
+
 import deep_learning_models
 import models
 from BayesianDecision import DiscriminantAnalysis
 from confusion_matrix import ConfusionMatrix
 from dataset import Data
-from tensorflow.examples.tutorials.mnist import input_data
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # Disable the warning, doesn't enable AVX/FMA
 os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'

@@ -11,7 +11,7 @@ from sklearn import svm, metrics
 from sklearn.ensemble import RandomForestClassifier
 from tqdm import tqdm
 
-from scripts.confusion_matrix import ConfusionMatrix
+from confusion_matrix import ConfusionMatrix
 
 confusion_matrix = ConfusionMatrix()
 
