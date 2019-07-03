@@ -47,7 +47,7 @@ def main():
     svm = models.SupportVectorMachine(C=1.0, kernel='rbf', gamma='scale')
     random_forest = models.RandomForest(n_estimators=100, max_depth=None, random_state=None)
     discriminant_analysis = DiscriminantAnalysis()
-    vaecnn = deep_learning_models.VAEConvolutionalNeuralNet(
+    vaecnn = deep_learning_models.VAEConvolutionNeuralNet(
         input_data.read_data_sets("data", one_hot=True),
         (28, 28),
         (28, 28)

@@ -185,7 +185,7 @@ class VAE:
                 # plt.show()
 
 
-class VAEConvolutionalNeuralNet:
+class VAEConvolutionNeuralNet:
 
     def __init__(self, images, input_shape, output_shape):
         """
